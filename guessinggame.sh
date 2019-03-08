@@ -1,0 +1,21 @@
+files=`ls -l | wc -l`
+files=$[ $files - 1 ]
+correct=0
+digit='^[0-9]+$'
+while [ $correct -ne 1 ]
+do
+	read -p "How many files are there in the current directory: " ans
+	if ! [[ $ans =~ $digit ]]
+	then
+		echo "Enter a Number"
+	elif [ $ans -gt $files ]
+	then
+		echo "Too High"
+	elif [ $ans -lt $files ]
+	then
+		echo "Too Low"
+	else
+		echo "Congrats Thats Correct"
+		break
+	fi
+done
