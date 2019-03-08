@@ -1,5 +1,8 @@
-files=`ls -l | wc -l`
-files=$[ $files - 1 ]
+files () {
+ ls | wc -l
+}
+
+nfiles=$( files - 1 )
 correct=0
 digit='^[0-9]+$'
 while [ $correct -ne 1 ]
@@ -8,10 +11,10 @@ do
 	if ! [[ $ans =~ $digit ]]
 	then
 		echo "Enter a Number"
-	elif [ $ans -gt $files ]
+	elif [ $ans -gt $nfiles ]
 	then
 		echo "Too High"
-	elif [ $ans -lt $files ]
+	elif [ $ans -lt $nfiles ]
 	then
 		echo "Too Low"
 	else
