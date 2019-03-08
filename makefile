@@ -1,8 +1,8 @@
 readme.md:
 	rm -f *.md
-	touch README.md
-	echo "# Guessing Game" > README.md
-	echo "## Date" >> README.md
-	date >> README.md
-	echo "## Number of Lines in guessinggame.sh" >> README.md
-	wc -l guessinggame.sh | cut -d ' ' -f 1 >> README.md
+	touch readme.md
+	echo "# Guessing Game" > readme.md
+	echo "## Date" >> readme.md
+	date >> readme.md
+	echo "## Number of Lines in guessinggame.sh" >> readme.md
+	wc -l guessinggame.sh | cut -d ' ' -f 1 >> readme.md
