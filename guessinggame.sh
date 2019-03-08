@@ -1,7 +1,6 @@
 files () {
  ls | wc -l
 }
-
 nfiles=$( files - 1 )
 correct=0
 digit='^[0-9]+$'
